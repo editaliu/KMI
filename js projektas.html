@@ -18,7 +18,7 @@
     <div class="container" id="remas">
         <div class="jumbotron">
             <header id="header">
-                Kūno masės <br>indekso skaičiuoklė
+                Count your<br>body mass index 
             </header>
         </div>
     </div>
@@ -29,14 +29,14 @@
             <fieldset name="kmiFieldset" id="field" class="kmilaukelis">
 
                 <div class="form-group">
-                    <label for="kg">Svoris (kg): <br/>
+                    <label>Weight (kg): <br/>
         <input type="text" id="mase" name="mase" class="form-control" value="0" onfocus="this.value=''"
         onselect="juodinti()"
         /></label>
                 </div>
 
                 <div class="form-group">
-                    <label for="cm"> Ūgis (cm): <br/>
+                    <label> Height (cm): <br/>
         <input type="text" id="ugis" name="ugis" class="form-control"
         oninput="inputas()" onfocus="this.value=''"
         /></label>
@@ -44,7 +44,7 @@
 
                 <p id="ivestassvoris"></p>
 
-                <input id="skaiciuoti" type="button" value="Skaičiuoti mano KMI" class="btn btn-primary" onclick="skaiciuoti()" onmouseover="didinti(this)" onmouseout="normaliai(this)" />
+                <input id="skaiciuoti" type="button" value="Count my BMI" class="btn btn-primary" onclick="skaiciuoti()" onmouseover="didinti(this)" onmouseout="normaliai(this)" />
 
                 <!--TURĖJO BŪTI RESET MYGTUKAS...
        
@@ -57,9 +57,9 @@
 
             <!-- SKAIČIUOKLĖS IŠVADOS   -->
             <br>
-            <p id="isvada" name="isvada"><b>Tavo kūno masės indeksas: <span id="viso" name="viso"> </span></b></p>
+            <p id="isvada"><b>Your body mass index is: <span id="viso"> </span></b></p>
 
-            <p id="taiyra"><b>Tai reiškia: <span id="reiksme" > </span></b></p>
+            <p id="taiyra"><b>It means: <span id="reiksme" > </span></b></p>
         </div>
 
 
@@ -67,16 +67,17 @@
         <div class="row well ">
             <div class="col-md-4">
 
-                <img src="https://thecomicninja.files.wordpress.com/2013/05/bizarro-abs-olutely.jpg?w=640" alt="Besmegeniai" width="200px">
+                <img src="https://thecomicninja.files.wordpress.com/2013/05/bizarro-abs-olutely.jpg?w=640" alt="Besmegeniai" width="200">
 
             </div>
             <div class="col-md-4 ">
 
                 <div id="zaidimolaukelis">
-                    <h3> Jei pasidarė labai liūdna, gali rizikuoti šiek tiek pralinksmėti, arba nuliūsti dar labiau. Rizikuosi žaisti?</h3>
+                    <h3> Are you sad? Let's play a game...</h3>
+                  <img id="saw" alt="saw" src="http://www.iconarchive.com/download/i1626/3xhumed/mega-games-pack-36/SAW-TheGame-3.ico">
                     <br>
                     <br>
-                    <input id="zaidimas" type="button" class="btn btn-primary" value="Žaisti!" onclick="zaidimas()" />
+                    <input id="zaidimas" type="button" class="btn btn-primary" value="PLAY" onclick="zaidimas()" />
                     <br>
                     <br>
                     <p id="gameresult"> </p>
@@ -92,21 +93,21 @@
         </div>
         <div class="row well">
             <div class="col-md-8">
-                <section class="float-middle">
+                <div class="float-middle">
 
-                    <input id="data" type="button" value="Rodyti šios dienos datą" class="btn btn-primary" onclick="data()" />
+                    <input id="data" type="button" value="Show the date" class="btn btn-primary" onclick="data()" />
                     <br>
                     <br>
                     <p id="rodytidata"> </p>
                     <br>
-                    <input id="datasukurimo" type="button" class="btn btn-primary" value="Rodyti puslapio sukūrimo datą" onclick="data2()" />
+                    <input id="datasukurimo" type="button" class="btn btn-primary" value="Show the birth of this page date " onclick="data2()" />
                     <br>
                     <br>
                     <p id="rodytidata2"> </p>
                     <br>
-                    <input id="pav" type="button" class="btn btn-primary" value="Čia yra setTimeout mygtukas" onclick="setTimeout(myfunkcion,1000);" />
+                    <input id="pav" type="button" class="btn btn-primary" value="This is setTimeout button" onclick="setTimeout(myfunkcion,1000);" />
 
-                </section>
+                </div>
             </div>
             <div class="col-md-4">
 
@@ -119,7 +120,7 @@
         <!--       LAUKELIS SU IKONOMIS IR 3 PAVEIKSLĖLIAIS     -->
         <div class="row" id="rowpav">
             <!--                    CSS MODAL-->
-            <div class="col-md-4 text-center"> <span id="icon" class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+            <div class="col-md-4 text-center"> <span class="icon glyphicon glyphicon-camera" aria-hidden="true"></span>
 
 <!--            1 paveikslelis   -->
                 <div class="thumbnail">
@@ -128,14 +129,14 @@
                     
                     <div id="myModal1" class="modal">
                         <span class="close">&times;</span>
-                        <img class="modal-content" id="img01">
+<!--                         <img class="modal-content" id="img01"> -->
                         <div id="caption1"></div>
 
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 text-center"> <span id="icon" class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+            <div class="col-md-4 text-center"> <span class="icon glyphicon glyphicon-picture" aria-hidden="true"></span>
                
                <!--            2 paveikslelis   -->
                 <div class="thumbnail">
@@ -143,12 +144,12 @@
                     <img id="myImage2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnkRsw3vLPtBHjJkry7Sf47ja5h2rl5xSwF__3lNs-G7oYDOQT" alt="Sugar" width="200" height="300">
                     <div class="alert alert-success alert-dismissable fade show">
                         <button id="spausk" type="button" class="close" data-dismiss="alert">&times;</button>
-                        <strong>← Spausk ant paveikslėlio kairėje!</strong> <br>←  ☺
+                        <strong>← Press on this picture on your left!</strong> <br>←  ☺
                     </div>
 
                     <div id="myModal2" class="modal">
                         <span class="close">&times;</span>
-                        <img class="modal-content" id="img02">
+<!--                         <img class="modal-content" id="img02"> -->
                         <div id="caption2"></div>
 
                     </div>
@@ -156,16 +157,16 @@
                 </div>
             </div>
 
-            <div class="col-md-4 text-center"> <span id="icon" class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+            <div class="col-md-4 text-center"> <span class="icon glyphicon glyphicon-picture" aria-hidden="true"></span>
               
                <!--            3 paveikslelis   -->
                 <div class="thumbnail">
-                    <h3>Balansas</h3>
+                    <h3>Balance</h3>
                     <img id="myImage3" src="https://s-media-cache-ak0.pinimg.com/originals/29/a4/6e/29a46e263ebba145ea0a27ae2e23b718.jpg" alt="Cupcakes" width="200" height="300">
 
                     <div id="myModal3" class="modal">
                         <span class="close">&times;</span>
-                        <img class="modal-content" id="img03">
+<!--                         <img class="modal-content" id="img03"> -->
                         <div id="caption3"></div>
                     </div>
                 </div>
@@ -212,11 +213,11 @@
 
     <!--    VALANDAS RODO :) IR FOOTERIS-->
     <div id="dabaryra">
-        <p>Dabar yra:</p>
+        <p>Now is:</p>
         <p id="demolaikas"></p>
     </div>
 
-    <footer id="footer"> © Edita Lengvinienė 2017</footer>
+    <footer id="footer"> © Edita Lengvinienė <br> created 2017 <br> modificated 2018</footer>
 
 
 
